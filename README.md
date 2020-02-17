@@ -75,7 +75,7 @@ Salida esperada:
 suma: -0.415873
 ```
 
-**P5**. Escriba una función que tome un valor entero y devuelva el número con sus dígitos en reversa. Por ejemplo, dado el numero 7631, la función deberá devolver 1367.
+**P6**. Escriba una función que tome un valor entero y devuelva el número con sus dígitos en reversa. Por ejemplo, dado el numero 7631, la función deberá devolver 1367.
 
 
 ### Parte 2
@@ -147,7 +147,7 @@ int generar_aleatorios(int num1, int num2, int num_aleatorios) {
 La siguiente tabla muestra los ejemplos de algunos casos de entrada y salida:
 
 |Número de lanzamientos | Salida |
-|---|--|--|
+|---|--|
 |5 |CCSSS, #de caras = 2, # de sellos = 3|
 |8 |SCCSCSCC, #de caras = 5, # de sellos = 3|
 |5 |SCSCC, # de caras = 3, # de sellos = 2|
