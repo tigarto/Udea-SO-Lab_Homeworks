@@ -9,7 +9,7 @@ int main(){
         for(int j = 1; j<=numeroFinal; j++){
             int resultado;
             resultado = i*j;
-            printf(" %d X %d = %d,", i, j, resultado);
+            printf(" %d X %d = %d,", j, i, resultado);
         }
         printf("\n");
     }
