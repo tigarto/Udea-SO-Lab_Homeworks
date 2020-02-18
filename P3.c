@@ -1,28 +1,19 @@
 #include <stdio.h>
 #include "P3.h"
 
-int secuencia()
-{
-    int ultimo;
+int main() {
+    int n;
     printf("%s", "\nEscriba el número de caracteres que tendra la secuencia: ");
-    scanf("%d", &ultimo);
-    char secuencia[ultimo];
-    char uno = '1';
-    char zero = '0';
+    scanf("%d", &n);
 
-    for (size_t i = ultimo; i > 0; i--)
-    {
-        if (i%2==0)
-        {
-            secuencia[i]=uno;
-            printf("\n%s",secuencia);
-        }
-        else
-        {
-            secuencia[i]=zero;
-            printf("\n%s",secuencia);
-        }
-        
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <= i; j++) {
+            if ( (i+j) % 2 == 0) {
+                printf("1");
+            } else {
+                printf("0");
+            }
+        };
+        printf("\n");
     }
-    return 0;
 }
