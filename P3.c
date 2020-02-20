@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "P3.h"
 
-int main() {
+int secuencia() {
     int n;
     printf("%s", "\nEscriba el número de caracteres que tendra la secuencia: ");
     scanf("%d", &n);

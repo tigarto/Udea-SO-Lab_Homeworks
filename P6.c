@@ -1,22 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include "P6.h"
 
-int factorial(int n);
-float serie(int x, int n);
-
-int main () {
-  int x, n;
-  float res; 
-
-  printf("Valor de entrada de x:\t");
-  scanf("%d", &x);
-
-  printf("Número de términos:\t");
-  scanf("%d", &n);
-
-  res = serie(x,n);
-  printf("\nsuma:\t%f", res);
-}
 
 float serie(int x, int n) {
   float acum = 0;

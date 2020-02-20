@@ -2,41 +2,11 @@
 #include <stdlib.h> //rand() y srand()
 #include <time.h>   //time()
 #include <stdbool.h>
+#include "P9.h"
 
 
-int mayor(int num1, int num2);
-int menor(int num1, int num2);
-int generar_aleatorios(int num1, int num2);
-bool pregunta(int a, int b);
-void mensaje(bool tipo);
-
-int main (void) {
-    srand(time(NULL)); //genera la semilla
-    int num_pares, min, max, a, b, continuar;
-    min = 0;
-    max = 10;
-    continuar = 1;
-    
-    a = generar_aleatorios(min, max);
-    b = generar_aleatorios(min, max);
-
-    while (continuar) {
-        if (pregunta(a,b)) {
-            mensaje(true);
-            a = generar_aleatorios(min, max);
-            b = generar_aleatorios(min, max);
-        } else {
-            mensaje(false);
-        }
-        printf("\n\t\t... ¿Deseas continuar?\n");
-        printf("\n\t\t... 1. Sí\t\t0. No\n");
-        scanf("%d", &continuar);
-    }
-    return 0;
-}
-
-void mensaje(bool tipo){
-    int msg = generar_aleatorios(1,4);
+void mensajeP9(bool tipo){
+    int msg = generar_aleatoriosP9(1,4);
     if (tipo) {
         switch (msg)
         {
@@ -84,7 +54,7 @@ void mensaje(bool tipo){
     }
 }
 
-bool pregunta(int a, int b) {
+bool preguntaP9(int a, int b) {
     int res;
 
     printf("\n¿Cuánto es %d veces %d?\n", a, b);
@@ -93,7 +63,7 @@ bool pregunta(int a, int b) {
     return a*b == res;
 }
 
-int mayor(int num1, int num2) {
+int mayorP9(int num1, int num2) {
     if(num1 >= num2) {
         return num1;
     }
@@ -102,7 +72,7 @@ int mayor(int num1, int num2) {
     }
 }
 
-int menor(int num1, int num2) {
+int menorP9(int num1, int num2) {
     if(num1 <= num2) {
         return num1;
     }
@@ -111,11 +81,11 @@ int menor(int num1, int num2) {
     }
 }
 
-int generar_aleatorios(int num1, int num2) {
+int generar_aleatoriosP9(int num1, int num2) {
     int cnt = 0, num, M, m;
 
-    M = mayor(num1, num2);
-    m = menor(num1, num2);
+    M = mayorP9(num1, num2);
+    m = menorP9(num1, num2);
 
     return rand()%(M - m + 1) + m;
 }

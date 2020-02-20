@@ -2,51 +2,7 @@
 #include <stdlib.h> //rand() y srand()
 #include <time.h>   //time()
 #include <stdbool.h>
-
-
-int mayor(int num1, int num2);
-int menor(int num1, int num2);
-int generar_aleatorios(int num1, int num2);
-bool pregunta(int a, int b);
-void mensaje(bool tipo);
-
-int main (void) {
-    srand(time(NULL)); //genera la semilla
-    int num_pares, min, max, a, b, aciertos, errores, continuar;
-    min = 0;
-    max = 10;
-    aciertos = 0;
-    errores = 0;
-    continuar = 1;
-    
-    a = generar_aleatorios(min, max);
-    b = generar_aleatorios(min, max);
-    
-    while (continuar) {
-        if (pregunta(a,b)) {
-            mensaje(true);
-            aciertos++;
-            a = generar_aleatorios(min, max);
-            b = generar_aleatorios(min, max);
-        } else {
-            mensaje(false);
-            errores++;
-        }
-        printf("\n\t\t... ¿Deseas continuar?\n");
-        printf("\n\t\t... 1. Sí\t\t0. No\n");
-        scanf("%d", &continuar);
-    }
-
-    float porcentaje = aciertos / (float) (aciertos + errores);
-    printf("Aciertos: %d\tErrores: %d", aciertos, errores);
-    printf("\nAcertaste un %f porciento de las preguntas.", porcentaje);
-
-    if (porcentaje < 0.75f) {
-        printf("\nPor favor pídele ayuda al instructor.\n");
-    }
-
-    return 0;
-}
+#include "P10.h"
 
 void mensaje(bool tipo){
     int msg = generar_aleatorios(1,4);
