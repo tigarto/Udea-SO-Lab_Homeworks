@@ -6,8 +6,8 @@
 double serieP5(double x, double n) {
   double acum = 0;
 
-  for (int i = 0; i < n; i++) {
-    acum = pow(x, i);
+  for (int i = 0; i <= n; i++) {
+    acum += pow(x, i);
   }
   return acum;
 }

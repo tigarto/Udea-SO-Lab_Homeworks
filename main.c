@@ -113,7 +113,7 @@ int main()
             }
             printf("\n\t\t... ¿Deseas continuar?\n");
             printf("\n\t\t... 1. Sí\t\t0. No\n");
-            scanf("%d\n", &continuar);
+            scanf("%d", &continuar);
         }
         break;
     case 9:
@@ -139,7 +139,7 @@ int main()
             }
             printf("\n\t\t... ¿Deseas continuar?\n");
             printf("\n\t\t... 1. Sí\t\t0. No\n");
-            scanf("%d\n", &continuar);
+            scanf("%d", &continuar);
         }
         break;
     case 10:
@@ -170,7 +170,7 @@ int main()
             }
             printf("\n\t\t... ¿Deseas continuar?\n");
             printf("\n\t\t... 1. Sí\t\t0. No\n");
-            scanf("%d\n", &continuar);
+            scanf("%d", &continuar);
         }
 
         float porcentaje = aciertos / (float)(aciertos + errores);
